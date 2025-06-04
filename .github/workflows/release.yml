@@ -45,7 +45,7 @@ jobs:
       tag_name: ${{ steps.release.outputs.tag_name }}
     steps:
       - name: Get installation token
-        uses: philips-software/app-token-action@v1.1.2
+        uses: philips-software/app-token-action@v2.0.1
         id: token
         with:
           app_id: ${{ secrets.FOREST_RELEASER_APP_ID }}
