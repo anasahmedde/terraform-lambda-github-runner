@@ -1,0 +1,34 @@
+name: Lambda Webhook
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    paths:
+      - .github/workflows/lambda-webhook.yml
+      - "modules/webhook/lambdas/webhook/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [16]
+    container:
+      image: node:${{ matrix.node }}
+    defaults:
+      run:
+        working-directory: modules/webhook/lambdas/webhook
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install dependencies
+        run: yarn install
+      - name: Run prettier
+        run: yarn format-check
+      - name: Run linter
+        run: yarn lint
+      - name: Run tests
+        run: yarn test
+      - name: Build distribution
+        run: yarn build
