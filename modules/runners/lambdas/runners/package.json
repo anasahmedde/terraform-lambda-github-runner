@@ -40,7 +40,7 @@
     "@aws-sdk/client-ssm": "^3.238.0",
     "@octokit/auth-app": "4.0.7",
     "@octokit/rest": "^19.0.5",
-    "@octokit/types": "^8.0.0",
+    "@octokit/types": "^14.1.0",
     "aws-sdk": "^2.1283.0",
     "cron-parser": "^4.7.0",
     "tslog": "^3.3.4",
