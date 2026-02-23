@@ -43,6 +43,6 @@
     "@octokit/webhooks": "^10.4.0",
     "aws-lambda": "^1.0.7",
     "aws-sdk": "^2.1283.0",
-    "tslog": "^3.3.4"
+    "tslog": "^4.10.2"
   }
 }
